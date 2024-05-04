@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Ask the use for their name 
         Console.Write("What is your first name?");
         string firstname = Console.ReadLine();
         Console.Write("What is your last name?");
