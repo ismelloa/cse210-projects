@@ -5,37 +5,36 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
-        int userNumber = int.Parse(Console.ReadLine());
-
         List<int> numbers = new List<int>();
-
+        
+        int userNumber = -1;
         while (userNumber != 0)
         {
-            numbers.Add(userNumber);
-            userNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter a number (0 to quit): ");
+            string userResponse = Console.ReadLine();
+            userNumber = int.Parse(userResponse);
             
+            // Only add the number to the list if it is not 0
+            if (userNumber != 0)
+            {
+                numbers.Add(userNumber);
+            }
         }
 
-        Console.WriteLine("Here is the list: ");
-        foreach (int number in numbers)
-        {
-            Console.Write(number + " "); // Print each number in the list
-        }
-
-        // Compute the sum of the numbers in the list
+        // Part 1: Compute the sum
         int sum = 0;
         foreach (int number in numbers)
         {
             sum += number;
         }
-        Console.WriteLine("\nSum: " + sum);
 
-        // Compute the average of the numbers in the list
-        double average = (double)sum / numbers.Count;
-        Console.WriteLine("Average: " + average);
+        Console.WriteLine($"The sum is: {sum}");
 
-        // Find the maximum number in the list
+        // Part 2: Compute the average
+        float average = ((float)sum) / numbers.Count;
+        Console.WriteLine($"The average is: {average}");
+
+        // Part 3: Find the max
         int max = numbers[0];
         foreach (int number in numbers)
         {
@@ -44,6 +43,25 @@ class Program
                 max = number;
             }
         }
-        Console.WriteLine("Maximum number: " + max);
+        Console.WriteLine($"The max is: {max}");
+
+        // Additional part: Find the smallest positive number closest to zero
+        int smallestPositiveClosestToZero = int.MaxValue;
+        foreach (int number in numbers)
+        {
+            if (number > 0 && number < smallestPositiveClosestToZero)
+            {
+                smallestPositiveClosestToZero = number;
+            }
+        }
+        Console.WriteLine($"The smallest positive number closest to zero is: {smallestPositiveClosestToZero}");
+
+        // Additional part: Sort the list
+        numbers.Sort();
+        Console.WriteLine("Sorted list:");
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number + " ");
+        }
     }
 }
