@@ -45,7 +45,7 @@ class Program
         }
         Console.WriteLine($"The max is: {max}");
 
-        // Additional part: Find the smallest positive number closest to zero
+        // Stretch Challenge: Find the smallest positive number closest to zero
         int smallestPositiveClosestToZero = int.MaxValue;
         foreach (int number in numbers)
         {
@@ -56,7 +56,7 @@ class Program
         }
         Console.WriteLine($"The smallest positive number closest to zero is: {smallestPositiveClosestToZero}");
 
-        // Additional part: Sort the list
+        // Stretch Challenge: Sort the list
         numbers.Sort();
         Console.WriteLine("Sorted list:");
         foreach (int number in numbers)
