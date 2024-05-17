@@ -25,8 +25,8 @@ class Program
         // job2.DisplayJobDetails();
 
 
-        // Resume myResume = new Resume();
-        // myResume._name = "Allison Rose";
+        Resume myResume = new Resume();
+        myResume._name = "Allison Rose";
 
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
@@ -34,9 +34,6 @@ class Program
         myResume.Display();
 
         
-                List<Type> variale = new List<Type>;
-
-                List : []
     }
         
         
