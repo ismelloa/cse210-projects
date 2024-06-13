@@ -25,13 +25,6 @@ class Program
         animationStrings.Add("-");
         animationStrings.Add("\\");
 
-        // foreach (string s in animationStrings)
-        // {
-        //     Console.WriteLine(s);
-        //     Thread.Sleep(1000);
-        //     Console.Write("\b \b");
-        // }
-
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(10);
 

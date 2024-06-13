@@ -36,3 +36,4 @@ public abstract class Activity
 
     public abstract void RunActivity();
 }
+
